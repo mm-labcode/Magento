@@ -1,0 +1,664 @@
+Single color variable
+${({ theme }) => theme.colors.graycolor4}
+
+Single media variable
+${({ theme }) => theme.container.screenmd}
+
+Single font-size variable
+${({ theme }) => theme.fontsize.fontbasesizes}
+
+Single font icon variable
+${({ theme }) => theme.fonts.fontIcon}
+
+mixins for only two digit calculation
+${({ theme }) => calcsize(theme.fontsize.fontbasesize, 2, '-')}
+
+mixins for only three digit calculation
+${({ theme }) => calcsizes(theme.fontsize.fontbasesize, 2, 4, 'plus')};
+
+mixins for font-family
+${({ theme }) => fontsfamily(theme.fonts.fontopensansmedium, calcsize(theme.fontsize.fontbasesize, 2, '-'), theme.colors.graycolor2)}
+
+mixins for signle
+${borderradius()}
+
+------ Variable formate ------
+
+export default {
+  colors: {
+    /* Button Color */
+    primary1: '#433a77',
+    primary2: '#fb7b48',
+    primary2hover: '#ff956b',
+    primary2active: '#e16534',
+    primary2disabled: '#d6d6d6',
+    secondary1: '#29bac8',
+    secondary2: '#555555',
+    secondary2active: '#bb4d21',
+    lightpurple: '#766f9f',
+    lightblue: '#63afee',
+    neavyblue: '#337ab7',
+    blueshade1: '#004eed',
+    color1: '#dcebf9',
+    color2: '#4e4e4e',
+    redshade: '#ca0000',
+    redshade1: '#e10a0a',
+    redshade2: '#fd0a0a',
+    redshade3: '#d60a0a',
+    redshade4: '#7c0303',
+    redshade5: '#d30000',
+    bannerbgclr: '#b7d1e2',
+    yellowsahde: '#fbf8f0',
+    mandatory: '#fb7b48',
+    mandatory1: '#febea4',
+
+    /*Add new color*/
+    yellowdarksahde: '#ffe057',
+    pinksahde: '#fb126d',
+    maroonshade: '#cf1919',
+    purpleshade: '#433a77',
+    darkgray: '#363d44',
+    greenshade: '#015731',
+    primary2light: '#fff3f0',
+    primary2dark: '#f15a2b',
+
+    /* Gray Color */
+    graycolor1: '#555555',
+    graycolor2: '#7c7c7c',
+    graycolor3: '#dbdbdb',
+    graycolor4: '#f5f5f5',
+    graycolor5: '#4e4e4e',
+    graycolor6: '#494949',
+    graycolor7: '#b2b2b2',
+    graycolor8: '#e5e5e5',
+    graycolor9: '#eeeeee',
+    graycolor10: '#777777',
+    graycolor11: '#dddddd',
+    graycolor12: '#e0e0e0',
+    graycolor13: '#f7f4f4',
+    graycolor14: '#f0f2f6',
+    graycolor15: '#282f43',
+    graycolor16: '#f4f4f4',
+    graycolor17: '#333333',
+    graycolor18: '#5e5e5e',
+    graycolor19: '#3f3f3f',
+    graycolor20: '#f9f9f9',
+    graycolor21: '#bcbcbc',
+    graycolor22: '#eaeaea',
+    graycolor23: '#e4e4e4',
+    graycolor24: '#fcfcfc',
+    graycolor25: '#e8e8e8',
+    graycolor26: '#949494',
+    graycolor27: '#565656',
+    graycolor28: '#d2d2d2',
+    graycolor29: '#737373',
+    graycolor30: '#fafafa',
+    graycolor31: '#ededed',
+    graycolor32: '#d3d3d3',
+    graycolor33: '#3a3a3a',
+    graycolor34: '#919191',
+    graycolor35: '#fefefe',
+
+    /* Background Color */
+    background1: '#3b2e5e',
+    background2: '#dcebf9',
+    backgroundtransparent: 'transparent',
+    background3: '#ebacad',
+    background4: '#daebf9',
+
+    /* Textbox color */
+    textbox1: '#c9c9c9',
+    textbox2: '#494949',
+    textbox1hover: '#959595',
+
+    /* Alerts Color */
+    alertdangerlightbg: '#ffdbdb',
+    alertdangerbg: '#f64b2f',
+    alertwarninglightbg: '#fff2d3',
+    alertwarningbg: '#f6ca2f',
+    alertsuccesslightbg: '#dbecc2',
+    alertsuccessbg: '#7eb62e',
+
+    /* Alerts Color */
+    tertiarycolor1: '#83b82f' /* parrot green */,
+    tertiarycolor2: '#fb504f' /* maroon red */,
+    tertiarycolor3: '#29bac8' /* dark sky */,
+    tertiarycolor4: '#e88b2b' /* Dark Muster */,
+    tertiarycolor5: '#f3cc39' /* dark Yellow */,
+    tertiarycolor6: '#4298e0' /* Blue */,
+    white: '#ffffff',
+    black: '#000000',
+    blackshade: '#191919',
+
+    /* Popup Color */
+    popupcolor1: '#3b2e5e',
+    popupcolor2: '#29bac8',
+    popupcolor3: '#1294a1',
+  },
+  fonts: {
+    fontpath: '../fonts/',
+    fontopensansregular: "'open_sansregular', Helvetica, Arial, sans-serif",
+    fontopensansmedium: "'open_sanssemibold', Helvetica, Arial, sans-serif",
+    fontopensansbold: "'open_sansbold', Helvetica, Arial, sans-serif",
+    fontworksansregular: "'work_sansregular', Helvetica, Arial, sans-serif",
+    fontworksansmedium: "'work_sansmedium', Helvetica, Arial, sans-serif",
+    fonticon: 'FontAwesome',
+  },
+  fontsize: {
+    fontbasesize: 14,
+    fontbasesizes: '14px',
+  },
+  container: {
+    screenxs: '767px',
+    screensm: '991px',
+    screenmd: '1170px',
+    screenlg: '1360px',
+    screenxlg: '1440px',
+    containerxs: '100%',
+    containersm: '750px',
+    containermd: '992px',
+    containerlg: '1170px',
+    containerxlg: '1340px',
+    containerdefault: '1440px',
+  },
+  backgroundimage: {
+    headersprite: "url('/static/images/common/header/header-footer-icons.svg') no-repeat left top",
+    checkoutsprite: "url('/static/images/common/header/checkout-header.svg') no-repeat left top",
+    somethingwentwrong: "url('/static/images/something/opps-sumthing.png') no-repeat center 210px",
+  },
+};
+
+----------------------------------------------------------------
+
+Custom formate 
+
+import styled from 'styled-components';
+import { borderradius, calcsize, fontsfamily, transform } from './mixins';
+
+export default styled.div`
+  li {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.3333% - 20px);
+    margin: 0 30px 30px 0;
+
+    @media (max-width: ${({ theme }) => theme.container.screenmd}) {
+      width: calc(50% - 15px);
+    }
+
+    @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    &:nth-child(3n + 0) {
+      margin-right: 0;
+
+      @media (max-width: ${({ theme }) => theme.container.screenmd}) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &:nth-child(2n + 0) {
+      @media (max-width: ${({ theme }) => theme.container.screenmd}) {
+        margin-right: 0;
+      }
+
+      @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &:last-child {
+      @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+        margin-bottom: 0;
+      }
+    }
+
+    &.addNew {
+      display: inline-block;
+
+      > div.address {
+        border: dashed 2px ${({ theme }) => theme.colors.graycolor4};
+        height: 180px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+
+        @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+          height: 150px;
+        }
+
+        .newAddress {
+          position: relative;
+          margin-top: 30px;
+          padding-top: 40px;
+          display: inline-block;
+          line-height: normal;
+
+          ${({ theme }) => fontsfamily(theme.fonts.fontopensansbold, theme.fontsize.fontbasesizes, theme.colors.graycolor5)};
+
+          @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+            padding-top: 30px;
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            background-color: ${({ theme }) => theme.colors.graycolor5};
+            position: absolute;
+            left: 50%;
+            top: 0;
+            margin-left: -2px;
+
+            ${borderradius()};
+          }
+
+          &::before {
+            width: 30px;
+            height: 4px;
+            margin-left: -15px;
+            margin-top: 13px;
+
+            @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+              width: 20px;
+              margin-left: -10px;
+              margin-top: 8px;
+            }
+          }
+
+          &::after {
+            width: 4px;
+            height: 30px;
+
+            @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    > div.address {
+      width: 100%;
+      border: solid 1px ${({ theme }) => theme.colors.graycolor4};
+      padding: 25px 30px 30px;
+      position: relative;
+
+      ${borderradius()};
+
+      @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+        padding: 15px 17px 30px;
+      }
+
+      .addressTitle {
+        p {
+          margin: 0;
+        }
+      }
+
+      .addressText {
+        font-size: ${({ theme }) => calcsize(theme.fontsize.fontbasesize, 1, '-')};
+        color: ${({ theme }) => theme.colors.graycolor2};
+        line-height: 22px;
+        padding: 0 0 10px;
+
+        @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+          font-size: ${({ theme }) => calcsize(theme.fontsize.fontbasesize, 2, '-')};
+          line-height: 20px;
+        }
+      }
+
+      .actions {
+        position: absolute;
+        right: 28px;
+        top: 27px;
+
+        @media (max-width: ${({ theme }) => theme.container.screenmd}) {
+          right: 25px;
+          top: 24px;
+        }
+
+        @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+          right: 15px;
+          top: 10px;
+        }
+
+        .remove {
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          vertical-align: middle;
+          text-indent: -9999px;
+          margin-left: 20px;
+          position: relative;
+          cursor: pointer;
+
+          @media (max-width: ${({ theme }) => theme.container.screenmd}) {
+            margin-left: 15px;
+          }
+
+          @media (max-width: ${({ theme }) => theme.container.screenxs}) {
+            margin-left: 15px;
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            width: 19px;
+            height: 1px;
+            background-color: ${({ theme }) => theme.colors.graycolor2};
+            position: absolute;
+            left: 0;
+            top: 7px;
+          }
+
+          &::after {
+            ${transform('rotate(-45deg)')}
+          }
+
+          &::before {
+            ${transform('rotate(45deg)')}
+          }
+        }
+
+        .edit {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          background-size: 32px;
+        }
+      }
+
+      .labelAddress {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 90px;
+        height: 30px;
+        padding: 3px 5px;
+        text-align: center;
+        font-size: ${({ theme }) => calcsize(theme.fontsize.fontbasesize, 2, '-')};
+        background-color: ${({ theme }) => theme.colors.graycolor4};
+
+        ${borderradius()};
+      }
+
+      .labelAddress + .labelAddress {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+`;
+
+
+------------------- Mixing -------------------------
+
+export const clearfix = () => {
+  return `
+    &::before,
+    &::after {
+      content: '';
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
+  `;
+};
+
+export const boxsizing = boxmodel => {
+  return `
+    -webkit-box-sizing: ${boxmodel};
+    -moz-box-sizing: ${boxmodel};
+    box-sizing: ${boxmodel};
+  `;
+};
+
+export const containerfixed = () => {
+  return `
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  ${clearfix('all')};
+  `;
+};
+
+export const boxshadow = shadow => {
+  return `
+    -webkit-box-shadow: ${shadow};
+    -moz-box-shadow: ${shadow};
+    box-shadow: ${shadow};
+  `;
+};
+
+export const borderradius = (radius = '2px') => {
+  return `
+    -webkit-border-radius: ${radius};
+    -moz-border-radius: ${radius};
+    border-radius: ${radius};
+  `;
+};
+
+export const transform = transforms => {
+  return `
+    -moz-transform: ${transforms};
+    -o-transform: ${transforms};
+    -ms-transform: ${transforms};
+    -webkit-transform: ${transforms};
+    transform: ${transforms};
+  `;
+};
+
+export const transition = (time = '0.5s') => {
+  return `
+    -webkit-transition: all ${time} ease;
+    -moz-transition: all ${time} ease;
+    -ms-transition: all ${time} ease;
+    -o-transition: all ${time} ease;
+    transition: all ${time} ease;
+  `;
+};
+
+export const transformXY = (valueX, valueY) => {
+  return `
+    -webkit-transform: translate(${valueX}, ${valueY});
+    -moz-transform: translate(${valueX}, ${valueY});
+    transform: translate(${valueX}, ${valueY});
+  `;
+};
+
+export const transformY = valueY => {
+  return `
+    -webkit-transform: translateY(${valueY});
+    -moz-transform: translateY(${valueY});
+    transform: translateY(${valueY});
+  `;
+};
+
+export const transformX = valueX => {
+  return `
+    -webkit-transform: translateX(${valueX});
+    -moz-transform: translateX(${valueX});
+    transform: translateX(${valueX});
+  `;
+};
+
+export const translate3d = (valueX, valueY, valueZ) => {
+  return `
+  -webkit-transform: translate3d(${valueX}, ${valueY}, ${valueZ});
+  -moz-transform: translate3d(${valueX}, ${valueY}, ${valueZ});
+  -o-transform: translate3d(${valueX}, ${valueY}, ${valueZ});
+  `;
+};
+
+export const imgsprite = (positionX, positionY) => {
+  return `  
+    background-position: ${positionX} ${positionY};
+  `;
+};
+
+export const fontsfamily = (fontfamily, fontsize, color) => {
+  return ` 
+  font-family: ${fontfamily} ;
+  font-size: ${fontsize};
+  color: ${color};
+  font-weight: normal;
+  `;
+};
+
+export const calcsize = (fontsize, multiplayer = 1, op = '*') => {
+  if (op == '*') return ` ${`${fontsize * multiplayer}px`};`;
+  if (op == '-') return `${`${fontsize - multiplayer}px`};`;
+  if (op == '+') return `${`${fontsize + multiplayer}px`};`;
+  if (op == '/') return `${`${fontsize / multiplayer}px`};`;
+  return fontsize;
+};
+
+export const calcsizes = (fontsize, multiplayer1 = 1, multiplayer2 = 1, op = 'plus') => {
+  if (op == 'plus') return ` ${`${fontsize * multiplayer1 + multiplayer2}px`};`;
+  if (op == 'minus') return `${`${fontsize * multiplayer1 - multiplayer2}px`};`;
+  return fontsize;
+};
+
+export const hyphens = (mode = 'auto') => {
+  return `
+  word-wrap: break-word;
+  -webkit-hyphens: ${mode};
+  -moz-hyphens: ${mode};
+  -ms-hyphens: ${mode};
+  -o-hyphens: ${mode};
+  hyphens: ${mode};
+  `;
+};
+
+export const appearance = valueA => {
+  return `
+  -webkit-appearance: ${valueA};
+  -moz-appearance: ${valueA};
+  -ms-appearance: ${valueA};
+  // appearance: ${valueA};
+  `;
+};
+
+export const placeholder = (color = `${({ theme }) => theme.colors.graycolor1}`) => {
+  return `
+    &::-moz-placeholder {
+    color: ${color};
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: ${color};
+  }
+
+  &::-webkit-input-placeholder {
+    color: ${color};
+  }
+  `;
+};
+
+export const buttonvariant = ({
+  backgroungcolor,
+  bordercolor,
+  textcolor,
+  hoverbackgroundcolor,
+  hoverbordercolor,
+  hovertextcolor,
+  activebackgroundcolor,
+  activebordercolor,
+  activetextcolor,
+  disabledbackgroundcolor,
+  disabledbordercolor,
+  disabledtextcolor,
+}) => {
+  return `
+  background: ${backgroungcolor};
+  border-color: ${bordercolor};
+  color: ${textcolor};
+  ${transition()};
+
+  &:hover,
+  &:focus {
+    background: ${hoverbackgroundcolor};
+    border-color: ${hoverbordercolor};
+    color: ${hovertextcolor};
+    ${transition()};
+  }
+
+  &:active {
+    background: ${activebackgroundcolor};
+    border-color: ${activebordercolor};
+    color: ${activetextcolor};
+  }
+
+  &:focus,
+  &:active {
+    outline-style: dotted;
+    outline-offset: 0;
+    outline-width: 1px;
+    outline-color: transparent; 
+  }
+
+  &[disabled] {
+    background: ${disabledbackgroundcolor};
+    border-color: ${disabledbordercolor};
+    cursor: not-allowed;
+    color: ${disabledtextcolor};
+
+    &:focus,
+    &:active {
+      outline-style: none;
+      outline-offset: 0;
+      outline-width: 0;
+      outline-color: transparent;
+    }
+  }
+  `;
+};
+
+export const alertvariant = (background, border, iconbgcolor, iconsymbol, icontextcolor, messagetextcolor, messagebgcolor) => {
+  return `
+  background: ${background};
+  border: solid 1px ${border};  
+    .iconBox {
+      width: 36px;
+      height: 36px;
+      left: 0;
+      top: 50%;
+      position: absolute;
+      background: ${iconbgcolor};
+      text-align: center;
+      padding: 6px 0;      
+      ${transformY('-50%')};
+      font-family: ${({ theme }) => theme.fonts.fonticon};
+  
+      &::before {
+        content: '\\${iconsymbol}';
+        color: ${icontextcolor};
+      }
+    }
+  
+    .messageBox {
+      width: 100%;
+      display: table-cell;
+      height: 100%;
+      padding: 0 12px;
+      line-height: 18px;
+      color: ${messagetextcolor};
+      background: ${messagebgcolor};
+      font-family: ${({ theme }) => theme.fonts.fontopensansmedium};
+      font-size: ${({ theme }) => calcsize(theme.fontsize.fontbasesize, 2, '-')};
+      vertical-align: middle;
+    }
+`;
+};
